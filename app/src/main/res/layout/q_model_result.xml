@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:layout_margin="5dp"
+    android:background="@drawable/bg_like_card"
+    android:padding="12dp">
+
+
+    <TextView
+        android:id="@+id/questionTV"
+        style="@style/settingsTitleTV"
+        android:text="What is The Capital Of Bangladesh?"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="6dp" />
+    <LinearLayout
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp">
+    </LinearLayout>
+    <RadioGroup
+        android:id="@+id/optionRG"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RadioButton
+            android:id="@+id/option0"
+            style="@style/optionStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Option 1">
+        </RadioButton>
+        <RadioButton
+            android:id="@+id/option1"
+            style="@style/optionStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Option 1">
+        </RadioButton>
+        <RadioButton
+            android:id="@+id/option2"
+            style="@style/optionStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Option 1">
+        </RadioButton>
+        <RadioButton
+            android:id="@+id/option3"
+            style="@style/optionStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Option 1">
+        </RadioButton>
+    </RadioGroup>
+
+</LinearLayout>

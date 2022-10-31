@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/nav_status_color"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+    <RelativeLayout
+        android:id="@+id/appbarRL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible">
+        <!--Todo : AppBar-->
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0dp"
+            android:gravity="center"
+            android:visibility="visible"
+            tools:ignore="MissingConstraints">
+
+            <!--Todo : Toolbar-->
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@color/toolbar_color"
+                android:gravity="center"
+                app:menu="@menu/menu"
+                app:layout_scrollFlags="scroll|enterAlways"
+                app:navigationIcon="@drawable/ic_baseline_menu_24"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+                <!--Todo :Location Set View-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="visible">
+                    <TextView
+                        android:id="@+id/appTitleTV"
+                        style="@style/settingsTitleTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/app_name"
+                        android:textColor="@color/white"></TextView>
+
+                </RelativeLayout>
+            </com.google.android.material.appbar.MaterialToolbar>
+        </com.google.android.material.appbar.AppBarLayout>
+    </RelativeLayout>
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottie"
+        android:layout_below="@id/appbarRL"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:visibility="visible"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/lottie_morning_rainy_weather" />
+    <ProgressBar
+        android:id="@+id/progressbar"
+        android:indeterminateTint="@color/white"
+        android:layout_centerInParent="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    </ProgressBar>
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/tryAgainBTN"
+        android:layout_below="@id/progressbar"
+        android:layout_centerHorizontal="true"
+        android:text="Try Again"
+        android:textAllCaps="false"
+        android:visibility="gone"
+        android:onClick="tryAgain"
+        android:layout_centerInParent="true"
+        android:background="@drawable/bg_button"
+        android:textSize="14sp"
+        android:textColor="@color/white"
+        android:layout_marginLeft="1dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="1dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    </androidx.appcompat.widget.AppCompatButton>
+
+    <LinearLayout
+        android:id="@+id/questionRL"
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/appbarRL"
+        android:layout_marginTop="105dp"
+        android:minHeight="350dp"
+        android:orientation="vertical"
+        tools:context=".MainActivity">
+
+        <com.github.islamkhsh.CardSliderViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardSlider_indicator="@id/indicator"
+            app:cardSlider_otherPagesWidth="24dp"
+            app:cardSlider_pageMargin="12dp"
+            app:cardSlider_smallAlphaFactor="0.5"
+            app:cardSlider_smallScaleFactor="0.9" />
+
+
+        <com.github.islamkhsh.CardSliderIndicator
+            android:id="@+id/indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="12dp"
+            app:indicatorsToShow="5" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:weightSum="3">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/previousBTN"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="1dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="1dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_button"
+                android:onClick="previous"
+                android:text="Previous"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="14sp"></androidx.appcompat.widget.AppCompatButton>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/submitBTN"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="1dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="1dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_button"
+                android:onClick="submit"
+                android:text="Submit"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:visibility="invisible"></androidx.appcompat.widget.AppCompatButton>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/nextBTN"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="1dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="1dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_button"
+                android:onClick="next"
+                android:text="Next"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="14sp"></androidx.appcompat.widget.AppCompatButton>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/resultRL"
+        android:visibility="gone"
+        android:orientation="vertical"
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:gravity="center_horizontal"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/resultTV"
+            style="@style/settingsTitleTV"
+            android:textSize="16sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Correct : 3\nIncorrect : 2\nMarks : 5"
+            android:textAlignment="textStart"></TextView>
+        <LinearLayout
+            android:weightSum="2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/retryBTN"
+                android:onClick="retry"
+                android:text="Retry"
+                android:textAllCaps="false"
+                android:background="@drawable/bg_button"
+                android:textSize="14sp"
+                android:textColor="@color/white"
+                android:layout_marginLeft="1dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="1dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content">
+            </androidx.appcompat.widget.AppCompatButton>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/showAnsBTN"
+                android:text="Show Ans"
+                android:textAllCaps="false"
+                android:onClick="showAns"
+                android:background="@drawable/bg_button"
+                android:textSize="14sp"
+                android:textColor="@color/white"
+                android:layout_marginLeft="1dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="1dp"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content">
+            </androidx.appcompat.widget.AppCompatButton>
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

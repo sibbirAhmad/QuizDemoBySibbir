@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+
+    <color name="colorPrimary">#6200EE</color>
+    <!--    <color name="colorPrimaryDark">#3700B3</color>-->
+    <color name="colorPrimaryDark">#050831</color>
+    <!--    <color name="colorAccent">#03DAC5</color>-->
+    <color name="colorAccent">@color/main_card_color</color>
+
+    <color name="nav_status_color">#00274E</color>
+
+    <!--    TODO : Main Colors-->SS
+    <color name="main_bg_color">#F5F6FA</color>
+    <color name="main_card_color">#FFFFFF</color>
+    <color name="main_text_color">#5A5A5A</color>
+    <color name="main_hint_text_color">#888484</color>
+
+
+    <color name="button_outline_border_color">#19252B</color>
+
+    <color name="black_overlay">#66000000</color>
+    <color name="toolbar_color">#080C43</color>
+
+    <color name="selected_waqto_color">@color/black</color>
+    <color name="non_selected_waqto_color">#00FFFEFE</color>
+
+    <!--    TODO : Bg Colors-->
+    <color name="bg_line_shadow_color">#E4DEDE</color>
+    <color name="bg_line_similiar_shadow_color">#CDD6DA</color>
+
+    <color name="app_bg_color">#F9F9F9</color>
+    <color name="app_text_color">#151515</color>
+    <color name="app_hint_color">#504E4E</color>
+    <color name="app_card_color">#FFFFFF</color>
+    <color name="app_icon_tint">#504E4E</color>
+    <color name="topbar_bg_color">#01000000</color>
+    <color name="green">#23B629</color>
+    <color name="red">#DD1C1C</color>
+</resources>
